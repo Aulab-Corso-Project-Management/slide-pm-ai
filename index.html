@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Generativa nel Ciclo di Vita del PM — Aulab</title>
+
+  <!-- Reveal.js base -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+  <!-- Font Awesome 6.5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS v4 browser CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Tailwind theme: custom colors -->
+  <style type="text/tailwindcss">
+    @theme {
+      --color-aulab-yellow: #ffed00;
+      --color-aulab-cyan:   #38bdf8;
+    }
+  </style>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+
+  <!-- ======================================================
+       WELCOME
+       ====================================================== -->
+  <section class="welcome-slide">
+    <div class="flex flex-col items-center gap-8 text-center">
+
+      <div style="filter: drop-shadow(0 0 80px rgba(255,237,0,0.35));">
+        <div class="w-28 h-28 rounded-3xl bg-aulab-yellow/10 border border-aulab-yellow/30 flex items-center justify-center">
+          <i class="fa-solid fa-brain text-aulab-yellow" style="font-size:3.5rem;"></i>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+        <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow/80">Aulab Masterclass</span>
+        <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <h1 class="text-white">AI Generativa nel</h1>
+        <h1><span class="text-gradient">Ciclo di Vita del PM</span></h1>
+      </div>
+
+      <div class="w-24 h-px bg-white/20"></div>
+
+      <p class="text-lg font-medium uppercase tracking-[0.2em] text-white/50">
+        Dal prompt al deliverable — strumenti concreti per il PM
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       AGENDA
+       ====================================================== -->
+  <section id="agenda">
+    <div class="flex flex-col h-full">
+
+      <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+        <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
+          Agenda
+        </span>
+      </div>
+
+      <div class="flex-1 flex items-center">
+        <div class="grid grid-cols-2 gap-x-16 gap-y-8 w-full">
+
+          <div class="flex items-center gap-6 group">
+            <div class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
+              <span class="text-xl font-black text-aulab-yellow">01</span>
+            </div>
+            <span class="text-xl font-bold text-white uppercase tracking-tight">L'AI Generativa</span>
+          </div>
+
+          <div class="flex items-center gap-6 group">
+            <div class="w-14 h-14 rounded-2xl bg-aulab-cyan/5 flex items-center justify-center border border-aulab-cyan/10 group-hover:border-aulab-cyan/40 transition-all duration-500 shrink-0">
+              <span class="text-xl font-black text-aulab-cyan">02</span>
+            </div>
+            <span class="text-xl font-bold text-white uppercase tracking-tight">AI per il PM</span>
+          </div>
+
+          <div class="flex items-center gap-6 group">
+            <div class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
+              <span class="text-xl font-black text-aulab-yellow">03</span>
+            </div>
+            <span class="text-xl font-bold text-white uppercase tracking-tight">Mindset &amp; Limiti</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================
+       CAPITOLO 01 — INTRODUZIONE ALL'AI  (yellow · dispari)
+       ====================================================== -->
+  <section>
+
+    <!-- Divider 01 -->
+    <section class="section-divider" data-state="is-section-divider">
+      <div class="flex flex-col items-center gap-8 text-center">
+
+        <div class="flex items-center gap-4">
+          <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+          <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow">Capitolo 01</span>
+          <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-white/[0.04] border border-aulab-yellow/20 shadow-[0_0_80px_rgba(255,237,0,0.12)]">
+          <i class="fa-solid fa-brain text-6xl text-aulab-yellow"></i>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h1 class="text-white">Introduzione all'</h1>
+          <h1 class="text-white">Intelligenza Artificiale</h1>
+        </div>
+
+        <div class="w-24 h-px bg-white/20"></div>
+
+        <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">
+          Cos'è &middot; Le categorie &middot; La storia
+        </p>
+
+      </div>
+    </section>
+
+    <!-- 01.01 — Schema a Matrioska -->
+    <section id="slide-0101">
+      <div class="flex flex-col h-full">
+
+        <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
+            01.01 &mdash; Le Categorie dell'AI
+          </span>
+        </div>
+
+        <div class="flex-1 flex items-center">
+          <div class="grid grid-cols-12 gap-8 w-full items-center">
+
+            <!-- SVG Matrioska -->
+            <div class="col-span-5 flex justify-center">
+              <svg id="matrioska-svg" width="420" height="420" viewBox="0 0 420 420" style="overflow:visible;">
+                <defs>
+                  <filter id="glow-llm" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="10" result="blur"/>
+                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                  </filter>
+                </defs>
+
+                <!-- Circles — DOM order = z-order: AI lowest, LLM highest -->
+                <!-- SVG circles have circular hit areas natively -->
+                <circle class="m-circle" data-key="ai"
+                  cx="210" cy="210" r="210"
+                  fill="rgba(255,255,255,0.015)"
+                  stroke="rgba(255,255,255,0.1)"
+                  stroke-width="1.5"
+                  style="cursor:pointer;transition:stroke 0.25s,stroke-width 0.25s;"/>
+
+                <circle class="m-circle" data-key="ml"
+                  cx="210" cy="210" r="166"
+                  fill="rgba(255,237,0,0.02)"
+                  stroke="rgba(255,237,0,0.18)"
+                  stroke-width="1.5"
+                  style="cursor:pointer;transition:stroke 0.25s,stroke-width 0.25s;"/>
+
+                <circle class="m-circle" data-key="dl"
+                  cx="210" cy="210" r="122"
+                  fill="rgba(255,237,0,0.035)"
+                  stroke="rgba(255,237,0,0.33)"
+                  stroke-width="1.5"
+                  style="cursor:pointer;transition:stroke 0.25s,stroke-width 0.25s;"/>
+
+                <circle class="m-circle" data-key="genai"
+                  cx="210" cy="210" r="78"
+                  fill="rgba(255,237,0,0.06)"
+                  stroke="rgba(255,237,0,0.52)"
+                  stroke-width="1.5"
+                  style="cursor:pointer;transition:stroke 0.25s,stroke-width 0.25s;"/>
+
+                <circle class="m-circle" data-key="llm"
+                  cx="210" cy="210" r="44"
+                  fill="rgba(255,237,0,0.14)"
+                  stroke="rgba(255,237,0,0.88)"
+                  stroke-width="2"
+                  filter="url(#glow-llm)"
+                  style="cursor:pointer;transition:stroke 0.25s,stroke-width 0.25s,fill 0.25s;"/>
+
+                <!-- Labels — centrati nel mezzo di ogni banda, pointer-events:none -->
+                <text x="210" y="22" text-anchor="middle" dominant-baseline="middle" pointer-events="none"
+                  style="font-family:Montserrat,sans-serif;font-size:8px;font-weight:800;fill:rgba(255,255,255,0.38);letter-spacing:2.5px;">INTELLIGENZA ARTIFICIALE</text>
+
+                <text x="210" y="66" text-anchor="middle" dominant-baseline="middle" pointer-events="none"
+                  style="font-family:Montserrat,sans-serif;font-size:8px;font-weight:800;fill:rgba(255,237,0,0.5);letter-spacing:2px;">MACHINE LEARNING</text>
+
+                <text x="210" y="110" text-anchor="middle" dominant-baseline="middle" pointer-events="none"
+                  style="font-family:Montserrat,sans-serif;font-size:8px;font-weight:800;fill:rgba(255,237,0,0.65);letter-spacing:2px;">DEEP LEARNING</text>
+
+                <text x="210" y="149" text-anchor="middle" dominant-baseline="middle" pointer-events="none"
+                  style="font-family:Montserrat,sans-serif;font-size:7.5px;font-weight:800;fill:rgba(255,237,0,0.82);letter-spacing:1.5px;">AI GENERATIVA</text>
+
+                <text x="210" y="210" text-anchor="middle" dominant-baseline="middle" pointer-events="none"
+                  style="font-family:Montserrat,sans-serif;font-size:13px;font-weight:900;fill:#ffed00;letter-spacing:3px;">LLM</text>
+
+              </svg>
+            </div>
+
+            <!-- Info panel -->
+            <div class="col-span-7 flex flex-col gap-5">
+
+              <div id="matrioska-panel" class="glass-card border-l-4 flex flex-col gap-3" style="min-height:180px;border-left-color:rgba(255,255,255,0.15);transition:border-left-color 0.3s;">
+                <div class="flex items-center gap-4">
+                  <div id="mp-icon" class="w-11 h-11 rounded-xl flex items-center justify-center border shrink-0 transition-all" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1);">
+                    <i id="mp-icon-i" class="fa-solid fa-hand-pointer text-lg" style="color:rgba(255,255,255,0.25);"></i>
+                  </div>
+                  <h3 id="mp-title" style="color:rgba(255,255,255,0.4);">Esplora le categorie</h3>
+                </div>
+                <p id="mp-body" class="text-gray-400">
+                  Passa il cursore su ogni cerchio per scoprire cosa rappresenta quella categoria dell'intelligenza artificiale.
+                </p>
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 01.02 — Definizione di AI -->
+    <section id="slide-0102">
+      <div class="flex flex-col h-full">
+
+        <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
+            01.02 &mdash; Definizione
+          </span>
+        </div>
+
+        <div class="flex-1 flex items-center">
+          <div class="grid grid-cols-12 gap-5 w-full">
+
+            <!-- Hero definition -->
+            <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/50">
+              <div class="flex items-start gap-6">
+                <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <i class="fa-solid fa-microchip text-aulab-yellow text-lg"></i>
+                </div>
+                <div class="flex flex-col gap-3">
+                  <h3>Intelligenza Artificiale</h3>
+                  <p class="text-gray-400">
+                    La capacità di un computer o di un programma di
+                    <strong class="text-white font-semibold">simulare funzioni cognitive umane</strong>,
+                    come l'apprendimento, il ragionamento e la risoluzione dei problemi.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 funzioni cognitive -->
+            <div class="col-span-4 glass-card flex flex-col gap-4">
+              <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                <i class="fa-solid fa-graduation-cap text-aulab-yellow text-lg"></i>
+              </div>
+              <h4>Apprendimento</h4>
+              <p class="text-gray-400">Acquisire informazioni e regole dall'esperienza, migliorando le prestazioni nel tempo.</p>
+            </div>
+
+            <div class="col-span-4 glass-card flex flex-col gap-4">
+              <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                <i class="fa-solid fa-sitemap text-aulab-yellow text-lg"></i>
+              </div>
+              <h4>Ragionamento</h4>
+              <p class="text-gray-400">Elaborare informazioni e trarre conclusioni logiche per affrontare situazioni nuove.</p>
+            </div>
+
+            <div class="col-span-4 glass-card flex flex-col gap-4">
+              <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                <i class="fa-solid fa-puzzle-piece text-aulab-yellow text-lg"></i>
+              </div>
+              <h4>Risoluzione Problemi</h4>
+              <p class="text-gray-400">Trovare soluzioni ottimali a sfide complesse, adattandosi al contesto.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 01.03 — AI nella storia -->
+    <section id="slide-0103">
+      <div class="flex flex-col h-full">
+
+        <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
+            01.03 &mdash; AI nella Storia
+          </span>
+        </div>
+
+        <div class="flex-1 flex items-center">
+          <div class="grid grid-cols-12 gap-5 w-full">
+
+            <!-- 1950 -->
+            <div class="col-span-6 glass-card">
+              <div class="flex items-start gap-5">
+                <div style="width:52px;height:52px;min-width:52px;min-height:52px;border-radius:14px;" class="bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <i class="fa-solid fa-flask text-aulab-yellow text-xl"></i>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <span class="text-2xl font-black text-aulab-yellow uppercase tracking-tight">1950</span>
+                  <span class="text-xs font-bold text-white uppercase tracking-wide">Test di Turing</span>
+                  <p class="text-gray-500">Alan Turing propone il primo criterio per misurare l'intelligenza di una macchina.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 1997 -->
+            <div class="col-span-6 glass-card">
+              <div class="flex items-start gap-5">
+                <div style="width:52px;height:52px;min-width:52px;min-height:52px;border-radius:14px;" class="bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <i class="fa-solid fa-chess text-aulab-yellow text-xl"></i>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <span class="text-2xl font-black text-aulab-yellow uppercase tracking-tight">1997</span>
+                  <span class="text-xs font-bold text-white uppercase tracking-wide">Deep Blue</span>
+                  <p class="text-gray-500">IBM batte il campione mondiale di scacchi Kasparov. Prima vittoria AI su un esperto umano.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2016 -->
+            <div class="col-span-6 glass-card">
+              <div class="flex items-start gap-5">
+                <div style="width:52px;height:52px;min-width:52px;min-height:52px;border-radius:14px;" class="bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <i class="fa-solid fa-circle text-aulab-yellow text-xl"></i>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <span class="text-2xl font-black text-aulab-yellow uppercase tracking-tight">2016</span>
+                  <span class="text-xs font-bold text-white uppercase tracking-wide">AlphaGo</span>
+                  <p class="text-gray-500">DeepMind batte il campione mondiale di Go. Deep Learning dimostra capacità "creative".</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2022 -->
+            <div class="col-span-6 glass-card">
+              <div class="flex items-start gap-5">
+                <div style="width:52px;height:52px;min-width:52px;min-height:52px;border-radius:14px;" class="bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <i class="fa-solid fa-comment-dots text-aulab-yellow text-xl"></i>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <span class="text-2xl font-black text-aulab-yellow uppercase tracking-tight">2022</span>
+                  <span class="text-xs font-bold text-white uppercase tracking-wide">ChatGPT</span>
+                  <p class="text-gray-500">100 milioni di utenti in 2 mesi. L'AI generativa diventa accessibile a tutti.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </section>
+  <!-- END CAP 01 -->
+
+
+
+
+  <!-- ======================================================
+       CLOSING
+       ====================================================== -->
+  <section class="welcome-slide">
+    <div class="flex flex-col items-center gap-8 text-center">
+
+      <div class="flex items-center gap-4">
+        <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+        <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow/80">Fine Lezione</span>
+        <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+      </div>
+
+      <div style="filter: drop-shadow(0 0 80px rgba(255,237,0,0.25));">
+        <div class="w-24 h-24 rounded-3xl bg-aulab-yellow/10 border border-aulab-yellow/30 flex items-center justify-center">
+          <i class="fa-solid fa-rocket text-aulab-yellow" style="font-size:2.5rem;"></i>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <h1 class="text-white">Ora tocca a te</h1>
+        <p class="text-lg text-white/50 font-medium">Sperimenta &middot; Fallisci in fretta &middot; Migliora</p>
+      </div>
+
+      <div class="w-24 h-px bg-white/20"></div>
+
+      <p class="text-sm font-bold uppercase tracking-[0.3em] text-white/30">
+        Aulab &middot; AI per Project Manager
+      </p>
+
+    </div>
+  </section>
+
+
+</div>
+</div>
+
+<!-- Reveal.js -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    controls: false,
+    progress: true,
+    center: false,
+    width: 1280,
+    height: 720,
+    margin: 0,
+  });
+</script>
+
+<script>
+  // ── Matrioska interactivity ──────────────────────────────
+  const matrioskaData = {
+    ai: {
+      title: 'Intelligenza Artificiale',
+      body: 'Il campo più ampio. Qualsiasi sistema che simuli funzioni cognitive umane: logica, regole, statistica, apprendimento. Esiste come disciplina accademica dal 1956.',
+      icon: 'fa-brain',
+      iconColor: 'rgba(255,255,255,0.6)',
+      iconBg: 'rgba(255,255,255,0.06)',
+      iconBorder: 'rgba(255,255,255,0.15)',
+      panelBorder: 'rgba(255,255,255,0.5)',
+    },
+    ml: {
+      title: 'Machine Learning',
+      body: 'Sottoinsieme dell\'AI. Gli algoritmi apprendono dai dati senza essere programmati esplicitamente per ogni compito. Più dati di qualità = migliori risultati.',
+      icon: 'fa-chart-line',
+      iconColor: 'rgba(255,237,0,0.7)',
+      iconBg: 'rgba(255,237,0,0.07)',
+      iconBorder: 'rgba(255,237,0,0.2)',
+      panelBorder: 'rgba(255,237,0,0.35)',
+    },
+    dl: {
+      title: 'Deep Learning',
+      body: 'Sottoinsieme del Machine Learning basato su reti neurali con molti strati (layer). Eccelle nel riconoscimento di pattern complessi in testi, immagini e audio. È la base dell\'AI generativa.',
+      icon: 'fa-layer-group',
+      iconColor: 'rgba(255,237,0,0.85)',
+      iconBg: 'rgba(255,237,0,0.09)',
+      iconBorder: 'rgba(255,237,0,0.25)',
+      panelBorder: 'rgba(255,237,0,0.58)',
+    },
+    genai: {
+      title: 'AI Generativa',
+      body: 'Sottoinsieme del Deep Learning. Modelli addestrati a creare contenuto originale — testo, immagini, audio, codice — a partire da un input in linguaggio naturale.',
+      icon: 'fa-wand-magic-sparkles',
+      iconColor: 'rgba(255,237,0,0.9)',
+      iconBg: 'rgba(255,237,0,0.1)',
+      iconBorder: 'rgba(255,237,0,0.3)',
+      panelBorder: 'rgba(255,237,0,0.7)',
+    },
+    llm: {
+      title: 'Large Language Model',
+      body: 'Il motore di ChatGPT, Claude e Gemini. Addestrati su miliardi di testi, comprendono e generano linguaggio umano con straordinaria fluidità. Sono il cuore dell\'AI Generativa.',
+      icon: 'fa-comment-dots',
+      iconColor: '#ffed00',
+      iconBg: 'rgba(255,237,0,0.13)',
+      iconBorder: 'rgba(255,237,0,0.4)',
+      panelBorder: '#ffed00',
+    },
+  };
+
+  const strokeDefault = { ai:'rgba(255,255,255,0.1)', ml:'rgba(255,237,0,0.18)', dl:'rgba(255,237,0,0.33)', genai:'rgba(255,237,0,0.52)', llm:'rgba(255,237,0,0.88)' };
+  const strokeHover   = { ai:'rgba(255,255,255,0.55)', ml:'rgba(255,237,0,0.58)', dl:'rgba(255,237,0,0.75)', genai:'rgba(255,237,0,0.9)', llm:'#ffed00' };
+
+  function setMatrioskaPanel(key) {
+    const d = matrioskaData[key];
+    document.getElementById('matrioska-panel').style.borderLeftColor = d.panelBorder;
+    document.getElementById('mp-title').textContent = d.title;
+    document.getElementById('mp-title').style.color = 'white';
+    document.getElementById('mp-body').textContent = d.body;
+    const icon = document.getElementById('mp-icon');
+    icon.style.background = d.iconBg;
+    icon.style.borderColor = d.iconBorder;
+    document.getElementById('mp-icon-i').className = `fa-solid ${d.icon} text-lg`;
+    document.getElementById('mp-icon-i').style.color = d.iconColor;
+  }
+
+  function resetMatrioskaPanel() {
+    document.getElementById('matrioska-panel').style.borderLeftColor = 'rgba(255,255,255,0.15)';
+    document.getElementById('mp-title').textContent = 'Esplora le categorie';
+    document.getElementById('mp-title').style.color = 'rgba(255,255,255,0.4)';
+    document.getElementById('mp-body').textContent = 'Passa il cursore su ogni cerchio per scoprire cosa rappresenta quella categoria dell\'intelligenza artificiale.';
+    const icon = document.getElementById('mp-icon');
+    icon.style.background = 'rgba(255,255,255,0.04)';
+    icon.style.borderColor = 'rgba(255,255,255,0.1)';
+    document.getElementById('mp-icon-i').className = 'fa-solid fa-hand-pointer text-lg';
+    document.getElementById('mp-icon-i').style.color = 'rgba(255,255,255,0.25)';
+  }
+
+  document.querySelectorAll('.m-circle').forEach(circle => {
+    const key = circle.dataset.key;
+    circle.addEventListener('mouseenter', () => {
+      circle.setAttribute('stroke', strokeHover[key]);
+      circle.setAttribute('stroke-width', key === 'llm' ? '3' : '2.5');
+      if (key === 'llm') circle.setAttribute('fill', 'rgba(255,237,0,0.22)');
+      setMatrioskaPanel(key);
+    });
+    circle.addEventListener('mouseleave', () => {
+      circle.setAttribute('stroke', strokeDefault[key]);
+      circle.setAttribute('stroke-width', key === 'llm' ? '2' : '1.5');
+      if (key === 'llm') circle.setAttribute('fill', 'rgba(255,237,0,0.13)');
+      resetMatrioskaPanel();
+    });
+  });
+</script>
+</body>
+</html>
