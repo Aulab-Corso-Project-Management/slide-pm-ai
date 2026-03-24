@@ -158,6 +158,13 @@ html, body {
 }
 
 /* ============================================================
+   GLASS CARD SMALL — padding ridotto per layout compatti (step, flow)
+   ============================================================ */
+.reveal .glass-card-sm {
+  padding: 1.5rem 1.75rem !important;
+}
+
+/* ============================================================
    PROGRESS BAR & CONTROLS
    ============================================================ */
 .reveal .progress {

@@ -388,6 +388,364 @@
   <!-- END CAP 01 -->
 
 
+  <!-- ======================================================
+       CAPITOLO 02 — COS'È L'AI GENERATIVA  (cyan · pari)
+       ====================================================== -->
+  <section>
+
+    <!-- Divider 02 -->
+    <section class="section-divider" data-state="is-section-divider">
+      <div class="flex flex-col items-center gap-8 text-center">
+
+        <div class="flex items-center gap-4">
+          <span class="block w-12 h-px bg-aulab-cyan/40"></span>
+          <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-cyan">Capitolo 02</span>
+          <span class="block w-12 h-px bg-aulab-cyan/40"></span>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-white/[0.04] border border-aulab-cyan/20 shadow-[0_0_80px_rgba(56,189,248,0.12)]">
+          <i class="fa-solid fa-wand-magic-sparkles text-6xl text-aulab-cyan"></i>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h1 class="text-white">Cos'è</h1>
+          <h1 class="text-white">l'AI Generativa</h1>
+        </div>
+
+        <div class="w-24 h-px bg-white/20"></div>
+
+        <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">
+          Definizione &middot; Differenze &middot; Come funziona
+        </p>
+
+      </div>
+    </section>
+
+    <!-- 02.01 — Definizione e Come Funziona -->
+    <section id="slide-0201">
+      <div class="flex flex-col h-full">
+
+        <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-cyan/60">
+            02.01 &mdash; Definizione
+          </span>
+        </div>
+
+        <div class="flex-1 flex items-center">
+          <div class="grid grid-cols-12 gap-5 w-full">
+
+            <!-- Hero definition -->
+            <div class="col-span-12 glass-card border-l-4 border-aulab-cyan/50">
+              <div class="flex items-start gap-6">
+                <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                  <i class="fa-solid fa-wand-magic-sparkles text-aulab-cyan text-lg"></i>
+                </div>
+                <div class="flex flex-col gap-3">
+                  <h3>AI Generativa</h3>
+                  <p class="text-gray-400">
+                    Una classe di modelli capaci di
+                    <strong class="text-white font-semibold">creare contenuto originale</strong> —
+                    testo, immagini, codice, audio — a partire da un input in linguaggio naturale.
+                    Non classifica, non predice: <strong class="text-white font-semibold">genera</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 pilastri: Input → Elaborazione → Output -->
+            <div class="col-span-4 glass-card flex flex-col gap-4">
+              <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                <i class="fa-solid fa-keyboard text-aulab-cyan text-lg"></i>
+              </div>
+              <h4>Input — Il Prompt</h4>
+              <p class="text-gray-400">Una richiesta in linguaggio naturale. Nessun codice, nessuna sintassi speciale: parli all'AI come parleresti a un collega.</p>
+            </div>
+
+            <div class="col-span-4 glass-card flex flex-col gap-4">
+              <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                <i class="fa-solid fa-microchip text-aulab-cyan text-lg"></i>
+              </div>
+              <h4>Elaborazione</h4>
+              <p class="text-gray-400">Il modello analizza il contesto e attiva i pattern appresi su miliardi di testi. Ogni token della risposta viene scelto probabilisticamente.</p>
+            </div>
+
+            <div class="col-span-4 glass-card flex flex-col gap-4">
+              <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                <i class="fa-solid fa-file-lines text-aulab-cyan text-lg"></i>
+              </div>
+              <h4>Output</h4>
+              <p class="text-gray-400">Contenuto originale, coerente con il contesto. Testo, codice, sintesi, analisi — generato in tempo reale e affinabile con un secondo prompt.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 02.02 — AI Tradizionale vs AI Generativa -->
+    <section id="slide-0202">
+      <div class="flex flex-col h-full">
+
+        <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-cyan/60">
+            02.02 &mdash; AI Tradizionale vs AI Generativa
+          </span>
+        </div>
+
+        <div class="flex-1 flex items-center">
+          <div class="grid grid-cols-12 gap-5 w-full items-stretch">
+
+            <!-- AI Tradizionale -->
+            <div class="col-span-5 glass-card flex flex-col gap-5">
+              <div class="flex items-center gap-4">
+                <div class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
+                  <i class="fa-solid fa-gears text-gray-400 text-lg"></i>
+                </div>
+                <h3 class="text-gray-300">AI Tradizionale</h3>
+              </div>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-600 shrink-0 mt-2"></span>
+                  <span class="text-gray-500">Segue <strong class="text-gray-300 font-semibold">regole esplicite</strong> definite dal programmatore</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-600 shrink-0 mt-2"></span>
+                  <span class="text-gray-500">Output <strong class="text-gray-300 font-semibold">predeterminato</strong>: stesso input → stesso output</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-600 shrink-0 mt-2"></span>
+                  <span class="text-gray-500">Eccelle in <strong class="text-gray-300 font-semibold">domini chiusi</strong>: filtri spam, classificazione, raccomandazioni</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-600 shrink-0 mt-2"></span>
+                  <span class="text-gray-500">Richiede <strong class="text-gray-300 font-semibold">interfacce specializzate</strong> per ogni caso d'uso</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- VS divider -->
+            <div class="col-span-2 flex flex-col items-center justify-center gap-3">
+              <div class="h-20 w-px bg-white/8"></div>
+              <span class="text-xl font-black text-white/20 uppercase tracking-widest shrink-0">vs</span>
+              <div class="h-20 w-px bg-white/8"></div>
+            </div>
+
+            <!-- AI Generativa -->
+            <div class="col-span-5 glass-card border-l-4 border-aulab-cyan/50 flex flex-col gap-5">
+              <div class="flex items-center gap-4">
+                <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                  <i class="fa-solid fa-wand-magic-sparkles text-aulab-cyan text-lg"></i>
+                </div>
+                <h3 class="text-aulab-cyan">AI Generativa</h3>
+              </div>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-aulab-cyan/60 shrink-0 mt-2"></span>
+                  <span class="text-gray-400">Apprende <strong class="text-white font-semibold">pattern statistici</strong> da enormi volumi di dati</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-aulab-cyan/60 shrink-0 mt-2"></span>
+                  <span class="text-gray-400">Output <strong class="text-white font-semibold">originale e contestuale</strong>: ogni risposta è unica</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-aulab-cyan/60 shrink-0 mt-2"></span>
+                  <span class="text-gray-400">Generalista: funziona su <strong class="text-white font-semibold">qualsiasi dominio</strong> espresso in linguaggio naturale</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-aulab-cyan/60 shrink-0 mt-2"></span>
+                  <span class="text-gray-400">Interfaccia universale: <strong class="text-white font-semibold">il linguaggio umano</strong></span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 02.03 — Come è cambiato il lavoro -->
+    <section id="slide-0203">
+      <div class="flex flex-col h-full">
+
+        <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-cyan/60">
+            02.03 &mdash; Come è Cambiato il Lavoro
+          </span>
+        </div>
+
+        <div class="flex-1 flex items-center">
+          <div class="grid grid-cols-12 gap-5 w-full">
+
+            <!-- Ieri -->
+            <div class="col-span-5 glass-card flex flex-col gap-5">
+              <div class="flex items-center gap-3">
+                <span class="text-xl font-black text-gray-500 uppercase tracking-tight">Ieri</span>
+                <div class="h-px flex-1 bg-white/5"></div>
+              </div>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-600 shrink-0 mt-2"></span>
+                  <span class="text-gray-500">Report scritti da zero, partendo da appunti sparsi</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-600 shrink-0 mt-2"></span>
+                  <span class="text-gray-500">Verbali: ore di lavoro manuale per sintetizzare una call</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-600 shrink-0 mt-2"></span>
+                  <span class="text-gray-500">Email stakeholder: ogni comunicazione personalizzata a mano</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-gray-600 shrink-0 mt-2"></span>
+                  <span class="text-gray-500">Analisi rischi: framework su Excel, revisioni lente</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Freccia centrale -->
+            <div class="col-span-2 flex items-center justify-center">
+              <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20">
+                <i class="fa-solid fa-arrow-right text-aulab-cyan text-lg"></i>
+              </div>
+            </div>
+
+            <!-- Oggi -->
+            <div class="col-span-5 glass-card border-l-4 border-aulab-cyan/50 flex flex-col gap-5">
+              <div class="flex items-center gap-3">
+                <span class="text-xl font-black text-aulab-cyan uppercase tracking-tight">Oggi</span>
+                <div class="h-px flex-1 bg-aulab-cyan/10"></div>
+              </div>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-aulab-cyan/60 shrink-0 mt-2"></span>
+                  <span class="text-gray-400">Prima bozza in <strong class="text-white font-semibold">30 secondi</strong> — il PM rivede, affina, firma</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-aulab-cyan/60 shrink-0 mt-2"></span>
+                  <span class="text-gray-400">Trascrizione + sintesi automatica con <strong class="text-white font-semibold">action item estratti</strong></span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-aulab-cyan/60 shrink-0 mt-2"></span>
+                  <span class="text-gray-400">AI adatta <strong class="text-white font-semibold">tono e registro</strong> per ogni audience automaticamente</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-aulab-cyan/60 shrink-0 mt-2"></span>
+                  <span class="text-gray-400">Risk register con scenari generati e <strong class="text-white font-semibold">priorità suggerite</strong></span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 02.04 — Come funziona un modello generativo -->
+    <section id="slide-0204">
+      <div class="flex flex-col h-full">
+
+        <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-cyan/60">
+            02.04 &mdash; Come Funziona un Modello Generativo
+          </span>
+        </div>
+
+        <div class="flex-1 flex items-center">
+          <div class="flex flex-col gap-5 w-full">
+
+            <!-- 4 step orizzontali -->
+            <div class="flex items-stretch gap-3 w-full">
+
+              <!-- 01: Addestramento -->
+              <div class="flex-1 glass-card glass-card-sm flex flex-col gap-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                    <i class="fa-solid fa-database text-aulab-cyan text-lg"></i>
+                  </div>
+                  <span class="text-xs font-black text-aulab-cyan uppercase tracking-widest">01</span>
+                </div>
+                <h4>Addestramento</h4>
+                <p class="text-gray-500">Miliardi di testi: libri, articoli, codice. Il modello impara i pattern del linguaggio, non regole esplicite.</p>
+              </div>
+
+              <div class="flex items-center shrink-0">
+                <i class="fa-solid fa-chevron-right text-gray-700 text-xl"></i>
+              </div>
+
+              <!-- 02: Apprendimento -->
+              <div class="flex-1 glass-card glass-card-sm flex flex-col gap-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                    <i class="fa-solid fa-network-wired text-aulab-cyan text-lg"></i>
+                  </div>
+                  <span class="text-xs font-black text-aulab-cyan uppercase tracking-widest">02</span>
+                </div>
+                <h4>Apprendimento</h4>
+                <p class="text-gray-500">La rete neurale aggiusta miliardi di parametri per ridurre gli errori di predizione, iterazione dopo iterazione.</p>
+              </div>
+
+              <div class="flex items-center shrink-0">
+                <i class="fa-solid fa-chevron-right text-gray-700 text-xl"></i>
+              </div>
+
+              <!-- 03: Predizione -->
+              <div class="flex-1 glass-card glass-card-sm flex flex-col gap-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                    <i class="fa-solid fa-chart-bar text-aulab-cyan text-lg"></i>
+                  </div>
+                  <span class="text-xs font-black text-aulab-cyan uppercase tracking-widest">03</span>
+                </div>
+                <h4>Predizione</h4>
+                <p class="text-gray-500">Dato il tuo prompt, il modello sceglie token per token il testo più probabile dato il contesto.</p>
+              </div>
+
+              <div class="flex items-center shrink-0">
+                <i class="fa-solid fa-chevron-right text-gray-700 text-xl"></i>
+              </div>
+
+              <!-- 04: Costruzione -->
+              <div class="flex-1 glass-card glass-card-sm border-l-4 border-aulab-cyan/60 flex flex-col gap-3 relative overflow-hidden">
+                <div class="absolute -right-8 -top-8 w-32 h-32 bg-aulab-cyan/5 rounded-full blur-2xl"></div>
+                <div class="relative flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-cyan/15 flex items-center justify-center border border-aulab-cyan/30 shrink-0">
+                    <i class="fa-solid fa-wand-magic-sparkles text-aulab-cyan text-lg"></i>
+                  </div>
+                  <span class="text-xs font-black text-aulab-cyan uppercase tracking-widest">04</span>
+                </div>
+                <h4 class="relative">Costruzione</h4>
+                <p class="text-gray-400 relative">Il testo prende forma token dopo token. Non viene recuperato: viene <strong class="text-white font-semibold">creato in tempo reale</strong>.</p>
+              </div>
+
+            </div>
+
+            <!-- Nota critica -->
+            <div class="glass-card border-l-4 border-aulab-cyan/40">
+              <div class="flex items-center gap-4">
+                <div class="w-9 h-9 rounded-lg bg-aulab-cyan/10 flex items-center justify-center border border-aulab-cyan/20 shrink-0">
+                  <i class="fa-solid fa-circle-info text-aulab-cyan text-sm"></i>
+                </div>
+                <p class="text-gray-400">
+                  <strong class="text-white font-semibold">Da ricordare:</strong> il modello non "capisce" nel senso umano —
+                  <strong class="text-white font-semibold">predice il testo più probabile</strong> in base al training.
+                  Questa distinzione è fondamentale per usarlo bene e sapere quando fidarsi.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </section>
+  <!-- END CAP 02 -->
+
+
 
 
   <!-- ======================================================
