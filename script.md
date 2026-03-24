@@ -139,3 +139,99 @@ E qui arriva la cosa più importante di questa slide, quella su cui vi chiedo di
 Questa distinzione non è filosofica. È pratica. Ci dice esattamente quando fidarci dello strumento e quando no. E ci porterà direttamente al capitolo sul mindset e i limiti.
 
 ---
+
+# Capitolo 03: Tecniche Base di Prompt Engineering
+
+---
+
+## Slide apertura capitolo
+
+Bene. Sappiamo cos'è l'AI generativa, sappiamo come funziona. Adesso arriva la parte pratica. Quella che potete portare in ufficio domani mattina.
+
+Parliamo di prompt engineering. E lo dico subito: il nome è un po' ingannatore. "Engineering" fa pensare a qualcosa di tecnico, riservato agli sviluppatori. Non è così. È comunicazione. È la capacità di parlare con uno strumento in modo che lo strumento vi risponda nel modo che volete.
+
+Questa è la skill che separa chi usa l'AI in modo trasformativo da chi la usa e rimane deluso. Non è una questione di quale tool usate — ChatGPT, Claude, Gemini, poco cambia. È una questione di come li usate.
+
+---
+
+## 03.01 — Cos'è il Prompt Engineering
+
+Definiamo il campo. Semplice, preciso.
+
+Il prompt engineering è la disciplina di **progettare input efficaci** per ottenere output di qualità da un modello AI. Non si tratta di trovare parole magiche o trucchi segreti. Si tratta di applicare la stessa chiarezza che usereste in un briefing con un collaboratore nuovo — uno molto capace, ma che non sa nulla del vostro contesto.
+
+Pensateci: se assumete un consulente esperto e il primo giorno gli dite "fai qualcosa di utile", cosa ottenete? Niente di buono. Ma se gli date il contesto, il progetto, l'obiettivo, il formato in cui volete il risultato — ottenete qualcosa di valore.
+
+L'LLM è esattamente questo: un collaboratore straordinariamente capace, ma completamente privo di contesto sul vostro lavoro. Il prompt engineering è il briefing.
+
+Perché questo conta per il PM in modo specifico? Perché il PM è il punto di integrazione tra tutte le parti di un progetto. Sa il contesto. Sa cosa serve. Sa a chi serve. Ha esattamente le informazioni che il modello ha bisogno di ricevere per dare risposte utili. Il PM che padroneggia il prompt engineering ha un moltiplicatore di produttività che i suoi colleghi non hanno.
+
+---
+
+## 03.02 — Prompt Deboli vs Prompt Efficaci
+
+Facciamo un confronto diretto. Guardare esempi concreti vale più di qualsiasi teoria.
+
+A sinistra avete tre prompt deboli. Sono prompt che la maggior parte delle persone scrive la prima volta che apre ChatGPT. "Scrivi un'email ai clienti." "Dammi i rischi del progetto." "Riassumi la riunione." Sembrano richieste ragionevoli. Ma per il modello sono quasi vuote.
+
+L'AI non sa quale cliente. Non sa di quale progetto. Non sa quale riunione. Non sa che tono volete, quanto deve essere lunga la risposta, se state scrivendo per un CEO o per un team tecnico. Il risultato sarà generico, inutilizzabile nel 90% dei casi — e vi convincerà che lo strumento non funziona.
+
+A destra avete gli stessi tre casi, riformulati.
+
+**L'email.** "Sei un PM senior. Scrivi un'email formale al cliente: ritardo di 3 giorni sulla feature X, azioni correttive già avviate. Max 150 parole." Adesso il modello sa chi deve essere, cosa deve scrivere, qual è il tono, e quanto può essere lungo. Ottenete una bozza professionale in dieci secondi.
+
+**I rischi.** "Progetto: migrazione cloud, 6 mesi, team di 5. Identifica i 5 rischi principali con probabilità e impatto (alto/medio/basso)." Adesso c'è un contesto. Il modello può attingere a pattern di progetti simili e darvi un risk register strutturato come punto di partenza — non come prodotto finito, ma come base di lavoro.
+
+**Il verbale.** "Partecipanti: Mario (PM), Sara (Dev Lead). Estrai: decisioni prese, action item con owner, punti aperti. Formato: elenco puntato." Adesso il modello sa cosa cercare e come restituirvelo.
+
+La differenza non è tecnica. È la stessa differenza tra un briefing buono e uno cattivo.
+
+---
+
+## 03.03 — Checklist per Prompt Efficaci
+
+Rendiamo questo operativo. Cinque ingredienti. Non servono sempre tutti e cinque — dipende dalla complessità del task. Ma ognuno che aggiungete migliora l'output.
+
+**01 — Ruolo.** Dite al modello chi deve essere. "Sei un PM esperto in ambito fintech." "Sei un esperto di comunicazione stakeholder." Questo non è decorativo: attiva nel modello i pattern linguistici e di ragionamento più adeguati per quel contesto.
+
+**02 — Compito.** Il verbo è fondamentale. "Scrivi", "analizza", "identifica", "sintetizza", "confronta" — ogni verbo orienta il modello verso un tipo di output diverso. Siate specifici: "scrivi una bozza" è diverso da "elenca i punti chiave".
+
+**03 — Contesto.** Tutto quello che il modello non può sapere da solo: il progetto, il settore, la fase, il team, il cliente, il vincolo. Più contesto rilevante date, più la risposta sarà pertinente. Non abbiate paura di essere prolissi in questa parte.
+
+**04 — Formato.** Come volete l'output? Tabella, elenco puntato, testo continuo, massimo X parole, in italiano formale, in tono diretto? Senza questa indicazione, il modello sceglie da solo — e spesso sceglie in modo sbagliato per il vostro uso specifico.
+
+**05 — Vincoli.** Cosa non deve fare. "Evita tecnicismi." "Non usare linguaggio commerciale." "Non fare assunzioni su dati che non ti ho fornito." I vincoli sono spesso la parte più trascurata, e sono quelli che evitano le sorprese più fastidiose.
+
+Usate questa checklist come base di lavoro. Con il tempo diventerà automatica.
+
+---
+
+## 03.04 — Il Concetto di Contesto
+
+C'è un concetto tecnico che devo spiegarvi, perché cambia il modo in cui usate questi strumenti. Si chiama **context window** — la finestra di contesto.
+
+Ogni volta che aprite una conversazione con un modello, c'è uno spazio di lavoro — come un foglio bianco molto grande. In quello spazio il modello legge tutto: le vostre istruzioni, i documenti che allegate, tutta la storia della conversazione fino a quel momento. Elabora tutto insieme, ogni volta che rispondete.
+
+Questo spazio non è infinito. Modelli diversi hanno finestre di contesto diverse — alcune molto grandi, alcune più limitate. Ma il principio è lo stesso: più informazioni rilevanti ci mettete dentro, migliore sarà la risposta. E quando la finestra si riempie troppo, il modello inizia a "dimenticare" le parti più vecchie della conversazione.
+
+Cosa mettere nel contesto? Il vostro ruolo e quello del destinatario. Il progetto: settore, obiettivo, fase, stakeholder. I documenti rilevanti: brief, verbali, metriche. Il tono e il pubblico dell'output atteso.
+
+Un punto che vale la pena citare. Anthropic, che sviluppa Claude, ha pubblicato nel 2025 un concetto interessante: il **context engineering**. La tesi è che il vero salto di qualità nell'uso dell'AI non stia più nel "trovare le parole giuste nel prompt" — ma nel costruire la configurazione di contesto più efficace per il task. Non è più una questione di formulazione: è una questione di architettura dell'informazione che date al modello.
+
+Per il PM, questo si traduce in una cosa concreta: costruite un template di contesto standard per i vostri progetti. Ruolo, progetto, vincoli, preferenze di output. Riutilatelo ogni volta. Vi fa risparmiare tempo e standardizza la qualità degli output.
+
+---
+
+## 03.05 — Vincoli di Comunicazione
+
+Prima di chiudere questo capitolo, dobbiamo affrontare i limiti. Non per spaventarvi — per rendervi utenti consapevoli.
+
+**Nessuna memoria tra sessioni.** Ogni volta che aprite una nuova conversazione, il modello riparte da zero. Non ricorda il progetto che gli avete descritto ieri. Non ricorda le preferenze che gli avete comunicato la settimana scorsa. Ogni sessione è una tabula rasa. La soluzione pratica: costruite un "prompt di sistema" standard — un paragrafo che descrive il vostro contesto abituale — e incollatelo all'inizio di ogni nuova conversazione. Trenta secondi, e siete operativi.
+
+**Conoscenza con data di scadenza.** Il modello è stato addestrato fino a una certa data. Non naviga internet in tempo reale — a meno che non abbiate attivato specificamente quella funzione. Non conosce l'accordo che avete firmato ieri, le metriche dello sprint della settimana scorsa, i cambiamenti organizzativi dell'ultimo mese. Queste informazioni dovete dargliele voi, allegandole o descrivendole nel prompt.
+
+**Può generare dati plausibili ma falsi.** Questo è il punto su cui vi chiedo più attenzione. Il modello, quando non sa qualcosa con certezza, può inventarla — numeri, date, nomi, citazioni, link — con una sicurezza disarmante. Non lo fa per ingannare: è semplicemente il modo in cui funziona, genera il testo più probabile dato il contesto. La regola pratica è semplice: qualsiasi dato specifico che il modello vi fornisce — statistiche, nomi di persone, riferimenti normativi — va verificato prima di usarlo in un documento ufficiale o in una comunicazione professionale.
+
+**Non conosce il vostro progetto.** L'AI non ha accesso a nessuna informazione riservata sulla vostra azienda, sul vostro cliente, sul vostro team. Quello che non gli dite non lo sa. Il PM è il bridge tra lo strumento e la realtà operativa. Questa è la vostra responsabilità — e anche il vostro vantaggio competitivo. Voi avete il contesto che il modello non ha. Dargli quel contesto è il lavoro del prompt engineering.
+
+---
