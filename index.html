@@ -101,6 +101,13 @@
             <div class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
               <span class="text-xl font-black text-aulab-yellow">03</span>
             </div>
+            <span class="text-xl font-bold text-white uppercase tracking-tight">Prompt Engineering</span>
+          </div>
+
+          <div class="flex items-center gap-6 group">
+            <div class="w-14 h-14 rounded-2xl bg-aulab-cyan/5 flex items-center justify-center border border-aulab-cyan/10 group-hover:border-aulab-cyan/40 transition-all duration-500 shrink-0">
+              <span class="text-xl font-black text-aulab-cyan">04</span>
+            </div>
             <span class="text-xl font-bold text-white uppercase tracking-tight">Mindset &amp; Limiti</span>
           </div>
 
@@ -746,6 +753,418 @@
   <!-- END CAP 02 -->
 
 
+
+
+  <!-- ======================================================
+       CAPITOLO 03 — TECNICHE BASE DI PROMPT ENGINEERING  (yellow · dispari)
+       ====================================================== -->
+  <section>
+
+    <!-- Divider 03 -->
+    <section class="section-divider" data-state="is-section-divider">
+      <div class="flex flex-col items-center gap-8 text-center">
+
+        <div class="flex items-center gap-4">
+          <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+          <span class="text-sm font-black uppercase tracking-[0.4em] text-aulab-yellow">Capitolo 03</span>
+          <span class="block w-12 h-px bg-aulab-yellow/40"></span>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-white/[0.04] border border-aulab-yellow/20 shadow-[0_0_80px_rgba(255,237,0,0.12)]">
+          <i class="fa-solid fa-terminal text-6xl text-aulab-yellow"></i>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <h1 class="text-white">Tecniche Base di</h1>
+          <h1 class="text-white">Prompt Engineering</h1>
+        </div>
+
+        <div class="w-24 h-px bg-white/20"></div>
+
+        <p class="text-lg font-bold uppercase tracking-[0.25em] text-white/50">
+          Struttura &middot; Contesto &middot; Chiarezza &middot; Limiti
+        </p>
+
+      </div>
+    </section>
+
+    <!-- 03.01 — Cos'è il Prompt Engineering -->
+    <section id="slide-0301">
+      <div class="flex flex-col h-full">
+
+        <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
+            03.01 &mdash; Cos'è il Prompt Engineering
+          </span>
+        </div>
+
+        <div class="flex-1 flex items-center">
+          <div class="grid grid-cols-12 gap-5 w-full">
+
+            <!-- Hero definition -->
+            <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/50">
+              <div class="flex items-start gap-6">
+                <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <i class="fa-solid fa-terminal text-aulab-yellow text-lg"></i>
+                </div>
+                <div class="flex flex-col gap-3">
+                  <h3>Prompt Engineering</h3>
+                  <p class="text-gray-400">
+                    La disciplina di <strong class="text-white font-semibold">progettare input efficaci</strong>
+                    per ottenere output di qualità da un modello AI.
+                    Non è programmazione — è <strong class="text-white font-semibold">comunicazione strutturata</strong>:
+                    dare al modello il giusto contesto, il compito preciso, il formato atteso.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 1 -->
+            <div class="col-span-4 glass-card flex flex-col gap-4">
+              <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                <i class="fa-solid fa-user-tie text-aulab-yellow text-lg"></i>
+              </div>
+              <h4>La Skill del PM Moderno</h4>
+              <p class="text-gray-400">Chi sa formulare bene un prompt ottiene output professionali. Chi no, ottiene risposte generiche inutilizzabili.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-span-4 glass-card flex flex-col gap-4">
+              <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                <i class="fa-solid fa-chart-line text-aulab-yellow text-lg"></i>
+              </div>
+              <h4>Impatto Diretto sull'Output</h4>
+              <p class="text-gray-400">Cambiare dieci parole in un prompt può trasformare una risposta da inutile a eccellente. La qualità dell'input determina la qualità dell'output.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-span-4 glass-card flex flex-col gap-4">
+              <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                <i class="fa-solid fa-people-group text-aulab-yellow text-lg"></i>
+              </div>
+              <h4>L'Analogia Giusta</h4>
+              <p class="text-gray-400">Dare un prompt vago a un LLM è come chiedere a un nuovo consulente esperto di "fare qualcosa" senza briefing. Il risultato sarà deludente.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03.02 — Prompt Deboli vs Prompt Efficaci -->
+    <section id="slide-0302">
+      <div class="flex flex-col h-full">
+
+        <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
+            03.02 &mdash; Prompt Deboli vs Prompt Efficaci
+          </span>
+        </div>
+
+        <div class="flex-1 flex items-center">
+          <div class="grid grid-cols-12 gap-5 w-full items-stretch">
+
+            <!-- Prompt Debole -->
+            <div class="col-span-5 glass-card flex flex-col gap-5">
+              <div class="flex items-center gap-4">
+                <div class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
+                  <i class="fa-solid fa-xmark text-gray-400 text-lg"></i>
+                </div>
+                <h3 class="text-gray-400">Prompt Debole</h3>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div class="rounded-xl border border-white/5 bg-white/[0.02]" style="padding: 0.875rem 1rem;">
+                  <p class="text-gray-600 text-sm italic">"Scrivi un'email ai clienti."</p>
+                </div>
+                <div class="rounded-xl border border-white/5 bg-white/[0.02]" style="padding: 0.875rem 1rem;">
+                  <p class="text-gray-600 text-sm italic">"Dammi i rischi del progetto."</p>
+                </div>
+                <div class="rounded-xl border border-white/5 bg-white/[0.02]" style="padding: 0.875rem 1rem;">
+                  <p class="text-gray-600 text-sm italic">"Riassumi la riunione."</p>
+                </div>
+              </div>
+              <p class="text-gray-600 text-xs uppercase tracking-wider">Nessun ruolo &middot; Nessun contesto &middot; Nessun formato</p>
+            </div>
+
+            <!-- VS divider -->
+            <div class="col-span-2 flex flex-col items-center justify-center gap-3">
+              <div class="h-20 w-px bg-white/8"></div>
+              <span class="text-xl font-black text-white/20 uppercase tracking-widest shrink-0">vs</span>
+              <div class="h-20 w-px bg-white/8"></div>
+            </div>
+
+            <!-- Prompt Efficace -->
+            <div class="col-span-5 glass-card border-l-4 border-aulab-yellow/50 flex flex-col gap-5">
+              <div class="flex items-center gap-4">
+                <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <i class="fa-solid fa-check text-aulab-yellow text-lg"></i>
+                </div>
+                <h3 class="text-aulab-yellow">Prompt Efficace</h3>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div class="rounded-xl border border-aulab-yellow/15 bg-aulab-yellow/[0.03]" style="padding: 0.875rem 1rem;">
+                  <p class="text-gray-300 text-sm">"<strong class="text-aulab-yellow/80">Sei un PM senior.</strong> Scrivi un'email formale al cliente: ritardo di 3 giorni sulla feature X, azioni correttive già avviate. <strong class="text-aulab-yellow/80">Max 150 parole.</strong>"</p>
+                </div>
+                <div class="rounded-xl border border-aulab-yellow/15 bg-aulab-yellow/[0.03]" style="padding: 0.875rem 1rem;">
+                  <p class="text-gray-300 text-sm">"<strong class="text-aulab-yellow/80">Progetto:</strong> migrazione cloud, 6 mesi, team di 5. Identifica i 5 rischi principali con probabilità e impatto (alto/medio/basso)."</p>
+                </div>
+                <div class="rounded-xl border border-aulab-yellow/15 bg-aulab-yellow/[0.03]" style="padding: 0.875rem 1rem;">
+                  <p class="text-gray-300 text-sm">"Partecipanti: Mario (PM), Sara (Dev Lead). <strong class="text-aulab-yellow/80">Estrai:</strong> decisioni prese, action item con owner, punti aperti. Formato: elenco puntato."</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03.03 — Checklist per Prompt Efficaci -->
+    <section id="slide-0303">
+      <div class="flex flex-col h-full">
+
+        <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
+            03.03 &mdash; Checklist per Prompt Efficaci
+          </span>
+        </div>
+
+        <div class="flex-1 flex items-center">
+          <div class="flex flex-col gap-5 w-full">
+
+            <!-- Intro strip -->
+            <div class="glass-card border-l-4 border-aulab-yellow/50">
+              <div class="flex items-center gap-4">
+                <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <i class="fa-solid fa-list-check text-aulab-yellow text-sm"></i>
+                </div>
+                <p class="text-gray-300">
+                  I <strong class="text-white font-semibold">5 ingredienti</strong> di un prompt efficace — linee guida Anthropic &amp; OpenAI.
+                  Non tutti servono sempre, ma più ne includi, migliore sarà l'output.
+                </p>
+              </div>
+            </div>
+
+            <!-- 5 cards -->
+            <div class="flex gap-4 w-full">
+
+              <div class="flex-1 glass-card glass-card-sm flex flex-col gap-3">
+                <div class="flex items-center gap-2">
+                  <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                    <i class="fa-solid fa-user-shield text-aulab-yellow text-sm"></i>
+                  </div>
+                  <span class="text-xs font-black text-aulab-yellow uppercase tracking-widest">01</span>
+                </div>
+                <h4>Ruolo</h4>
+                <p class="text-gray-500">"Sei un PM esperto in ambito finanziario…"</p>
+              </div>
+
+              <div class="flex-1 glass-card glass-card-sm flex flex-col gap-3">
+                <div class="flex items-center gap-2">
+                  <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                    <i class="fa-solid fa-bullseye text-aulab-yellow text-sm"></i>
+                  </div>
+                  <span class="text-xs font-black text-aulab-yellow uppercase tracking-widest">02</span>
+                </div>
+                <h4>Compito</h4>
+                <p class="text-gray-500">"Scrivi / Analizza / Identifica / Riassumi…"</p>
+              </div>
+
+              <div class="flex-1 glass-card glass-card-sm flex flex-col gap-3">
+                <div class="flex items-center gap-2">
+                  <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                    <i class="fa-solid fa-layer-group text-aulab-yellow text-sm"></i>
+                  </div>
+                  <span class="text-xs font-black text-aulab-yellow uppercase tracking-widest">03</span>
+                </div>
+                <h4>Contesto</h4>
+                <p class="text-gray-500">"Progetto: migrazione cloud, team di 5, scadenza Q3…"</p>
+              </div>
+
+              <div class="flex-1 glass-card glass-card-sm flex flex-col gap-3">
+                <div class="flex items-center gap-2">
+                  <div class="w-9 h-9 rounded-lg bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                    <i class="fa-solid fa-table-list text-aulab-yellow text-sm"></i>
+                  </div>
+                  <span class="text-xs font-black text-aulab-yellow uppercase tracking-widest">04</span>
+                </div>
+                <h4>Formato</h4>
+                <p class="text-gray-500">"Rispondi con una tabella / elenco / max 200 parole…"</p>
+              </div>
+
+              <div class="flex-1 glass-card glass-card-sm border-l-4 border-aulab-yellow/60 flex flex-col gap-3 relative overflow-hidden">
+                <div class="absolute -right-6 -top-6 w-24 h-24 bg-aulab-yellow/5 rounded-full blur-2xl"></div>
+                <div class="flex items-center gap-2 relative">
+                  <div class="w-9 h-9 rounded-lg bg-aulab-yellow/15 flex items-center justify-center border border-aulab-yellow/30 shrink-0">
+                    <i class="fa-solid fa-ban text-aulab-yellow text-sm"></i>
+                  </div>
+                  <span class="text-xs font-black text-aulab-yellow uppercase tracking-widest">05</span>
+                </div>
+                <h4 class="relative">Vincoli</h4>
+                <p class="text-gray-400 relative">"Evita tecnicismi / Solo in italiano / Non usare bullet…"</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03.04 — Il Concetto di Contesto -->
+    <section id="slide-0304">
+      <div class="flex flex-col h-full">
+
+        <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
+            03.04 &mdash; Il Concetto di Contesto
+          </span>
+        </div>
+
+        <div class="flex-1 flex items-center">
+          <div class="grid grid-cols-12 gap-5 w-full">
+
+            <!-- Hero: Context Window -->
+            <div class="col-span-12 glass-card border-l-4 border-aulab-yellow/50">
+              <div class="flex items-start gap-6">
+                <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <i class="fa-solid fa-brain text-aulab-yellow text-lg"></i>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <h3>La Context Window — La "Memoria di Lavoro" del Modello</h3>
+                  <p class="text-gray-400">
+                    Ogni conversazione ha uno spazio dove il modello legge tutto: istruzioni, documenti allegati, storico della chat.
+                    <strong class="text-white font-semibold">Più contesto rilevante fornisci, migliore sarà la risposta.</strong>
+                    Lo spazio non è infinito — va usato con intenzione.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card: Cosa includere -->
+            <div class="col-span-6 glass-card flex flex-col gap-4">
+              <div class="flex items-center gap-4">
+                <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <i class="fa-solid fa-circle-plus text-aulab-yellow text-lg"></i>
+                </div>
+                <h4>Cosa Includere nel Contesto</h4>
+              </div>
+              <ul class="space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0 mt-2"></span>
+                  <span class="text-gray-400">Il tuo <strong class="text-white font-semibold">ruolo</strong> e quello del destinatario finale</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0 mt-2"></span>
+                  <span class="text-gray-400">Il <strong class="text-white font-semibold">progetto</strong>: settore, obiettivo, fase, stakeholder chiave</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0 mt-2"></span>
+                  <span class="text-gray-400">I <strong class="text-white font-semibold">documenti rilevanti</strong>: brief, verbali, dati di sprint</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0 mt-2"></span>
+                  <span class="text-gray-400">Il <strong class="text-white font-semibold">tono e il pubblico</strong> dell'output atteso</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Card: Context Engineering -->
+            <div class="col-span-6 glass-card flex flex-col gap-4 relative overflow-hidden">
+              <div class="absolute -right-10 -top-10 w-40 h-40 bg-aulab-yellow/5 rounded-full blur-3xl"></div>
+              <div class="flex items-center gap-4 relative">
+                <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                  <i class="fa-solid fa-sitemap text-aulab-yellow text-lg"></i>
+                </div>
+                <h4 class="relative">Context Engineering</h4>
+              </div>
+              <p class="text-gray-400 relative">
+                Anthropic (2025): la sfida non è più "trovare le parole giuste" nel prompt —
+                è <strong class="text-white font-semibold">costruire la configurazione di contesto</strong>
+                più efficace per ottenere il comportamento desiderato.
+                Il contesto giusto vale più di un prompt elaborato.
+              </p>
+              <span class="text-xs font-bold text-aulab-yellow/40 uppercase tracking-wider relative">Fonte: Anthropic Engineering Blog, 2025</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 03.05 — Vincoli di Comunicazione -->
+    <section id="slide-0305">
+      <div class="flex flex-col h-full">
+
+        <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
+            03.05 &mdash; Vincoli di Comunicazione
+          </span>
+        </div>
+
+        <div class="flex-1 flex items-center">
+          <div class="flex flex-col gap-4 w-full">
+
+            <div class="grid grid-cols-2 gap-4 w-full">
+
+              <!-- Vincolo 1: Memoria -->
+              <div class="glass-card flex flex-col gap-3">
+                <div class="flex items-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
+                    <i class="fa-solid fa-rotate-left text-gray-400 text-lg"></i>
+                  </div>
+                  <h4 class="text-gray-300">Nessuna Memoria tra Sessioni</h4>
+                </div>
+                <p class="text-gray-500">Ogni nuova conversazione riparte da zero. <strong class="text-white font-semibold">Ripeti il contesto critico</strong> ogni volta, o costruisci un prompt di sistema standard da riutilizzare.</p>
+              </div>
+
+              <!-- Vincolo 2: Dati Real-Time -->
+              <div class="glass-card flex flex-col gap-3">
+                <div class="flex items-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
+                    <i class="fa-solid fa-calendar-xmark text-gray-400 text-lg"></i>
+                  </div>
+                  <h4 class="text-gray-300">Conoscenza con Data di Scadenza</h4>
+                </div>
+                <p class="text-gray-500">Il modello non naviga internet e non conosce eventi post-training. <strong class="text-white font-semibold">Allega tu i dati aggiornati</strong>: report, log, screenshot, metriche.</p>
+              </div>
+
+              <!-- Vincolo 3: Allucinazioni -->
+              <div class="glass-card flex flex-col gap-3">
+                <div class="flex items-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 shrink-0">
+                    <i class="fa-solid fa-triangle-exclamation text-gray-400 text-lg"></i>
+                  </div>
+                  <h4 class="text-gray-300">Può Generare Dati Plausibili ma Falsi</h4>
+                </div>
+                <p class="text-gray-500">Numeri, date, nomi, link: il modello può inventarli con sicurezza. <strong class="text-white font-semibold">Verifica sempre</strong> i dati specifici prima di usarli in contesti professionali.</p>
+              </div>
+
+              <!-- Vincolo 4: Conoscenza del Progetto -->
+              <div class="glass-card border-l-4 border-aulab-yellow/40 flex flex-col gap-3">
+                <div class="flex items-center gap-4">
+                  <div class="w-11 h-11 rounded-xl bg-aulab-yellow/10 flex items-center justify-center border border-aulab-yellow/20 shrink-0">
+                    <i class="fa-solid fa-file-circle-question text-aulab-yellow text-lg"></i>
+                  </div>
+                  <h4>Non Conosce il Tuo Progetto</h4>
+                </div>
+                <p class="text-gray-400">L'AI non sa nulla del tuo contesto specifico. <strong class="text-white font-semibold">Il PM è il bridge</strong> tra il modello e la realtà operativa. Più descrivi, più ottieni.</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </section>
+  <!-- END CAP 03 -->
 
 
   <!-- ======================================================
