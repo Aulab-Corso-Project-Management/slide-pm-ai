@@ -419,7 +419,19 @@ Un'AI super intelligente "non" affonderà le carriere di 3000 Project manager ge
 
 Il ruolo manageriale è scivolato dall'impostazione logorante e meccanica alla **Review Magistrale** su concetti più intellettuali e orchestrazioni altissime umane. Toglietevi dal creare fogli e focalizzatevi sulla soft-skill imponente che vi paga di più. Trovare l'armonia, mediare conflitti duri, guardare l'espressione in faccia ad un Product Owner che odia la roadmap ed evitare l'astio col team Tech. Scegliete voi, l'IA quelle robe per cinquant'anni almeno, umanamente non è in grado di raddrizzare. E il focus tornerà proprio su quello per cui servono i veri Project Manager, svelenando tutti i colli impiegatizi che fino ad oggi lo esaurivano per niente!
 
-L'intelligenza Artificiale vi appiana le logiche per sveltirle, la **Firma Finale per Responsabilità** però è orgogliosamente una condanna e un privilegio soltanto del genio umano a corredo. Aprite la plancia e sperimentate!
-Vi ringrazio e buon corso!
+L'intelligenza Artificiale vi appiana le logiche per sveltirle, la **Firma Finale per Responsabilità** però è orgogliosamente una condanna e un privilegio soltanto del genio umano a corredo.
+
+---
+
+## Slide Finale: Call to Action (Ora tocca a te)
+
+Ed eccoci alla fine. Ma non è una "conclusione", è un punto di partenza.
+
+Io vi ho dato la teoria, l'interfaccia, i concetti e il mindset, ma il Prompt Engineering si impara solo "rompendo le cose". Sperimentate in prima persona. 
+Aprite subito lo strumento, copiate il "Prompt Master" aziendale, dategli in pasto uno scope sgangherato di un vostro progetto reale. Guardate la roba inaccettabile che vi sputerà fuori al primo giro, correggete il tiro, aggiungete il contesto che mancava, imponete lo schema desiderato rigido, e godetevi la magia di vederlo riallinearsi e risolvervi il file perfetto in formato tabellare 20 secondi dopo.
+
+**Sperimentate.** Vi autorizzo a fallire subito e a fallire in fretta. Più errori grossolani l'AI farà sotto i vostri occhi domani, più affinerete il mindset critico su dove raddrizzare il prompt dopodomani.
+
+Il mondo dei PM è appena cambiato ed è ora di mettersi ai comandi. Buon lavoro a tutti!
 
 ---
