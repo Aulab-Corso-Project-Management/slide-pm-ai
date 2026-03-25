@@ -172,17 +172,13 @@ Perché questo conta per il PM in modo specifico? Perché il PM è il punto di i
 
 Facciamo un confronto diretto. Guardare esempi concreti vale più di qualsiasi teoria.
 
-A sinistra avete tre prompt deboli. Sono prompt che la maggior parte delle persone scrive la prima volta che apre ChatGPT. "Scrivi un'email ai clienti." "Dammi i rischi del progetto." "Riassumi la riunione." Sembrano richieste ragionevoli. Ma per il modello sono quasi vuote.
+A sinistra avete un prompt debole. È il tipo di prompt che la maggior parte delle persone scrive la prima volta che apre ChatGPT: **"Scrivimi un post."** Sembra una richiesta ragionevole. Ma per il modello è quasi vuota.
 
-L'AI non sa quale cliente. Non sa di quale progetto. Non sa quale riunione. Non sa che tono volete, quanto deve essere lunga la risposta, se state scrivendo per un CEO o per un team tecnico. Il risultato sarà generico, inutilizzabile nel 90% dei casi — e vi convincerà che lo strumento non funziona.
+L'AI non sa quale piattaforma, quale argomento, quale tono, per chi, quanto lungo. Il risultato sarà inevitabilmente generico — e vi convincerà che lo strumento non funziona. Il problema non è lo strumento.
 
-A destra avete gli stessi tre casi, riformulati.
+A destra avete lo stesso caso, riformulato: **"Scrivi un post LinkedIn per promuovere un webinar gratuito sulla sostenibilità in azienda. Target: manager di PMI italiane. Max 200 parole, stile professionale ma accessibile."**
 
-**L'email.** "Sei un PM senior. Scrivi un'email formale al cliente: ritardo di 3 giorni sulla feature X, azioni correttive già avviate. Max 150 parole." Adesso il modello sa chi deve essere, cosa deve scrivere, qual è il tono, e quanto può essere lungo. Ottenete una bozza professionale in dieci secondi.
-
-**I rischi.** "Progetto: migrazione cloud, 6 mesi, team di 5. Identifica i 5 rischi principali con probabilità e impatto (alto/medio/basso)." Adesso c'è un contesto. Il modello può attingere a pattern di progetti simili e darvi un risk register strutturato come punto di partenza — non come prodotto finito, ma come base di lavoro.
-
-**Il verbale.** "Partecipanti: Mario (PM), Sara (Dev Lead). Estrai: decisioni prese, action item con owner, punti aperti. Formato: elenco puntato." Adesso il modello sa cosa cercare e come restituirvelo.
+Adesso il modello sa dove pubblica, qual è il tema, chi leggerà il post, quanto deve essere lungo e con quale registro. In dieci secondi avete una bozza professionale, pronta da rifinire.
 
 La differenza non è tecnica. È la stessa differenza tra un briefing buono e uno cattivo.
 
@@ -190,19 +186,21 @@ La differenza non è tecnica. È la stessa differenza tra un briefing buono e un
 
 ## 03.03 — Checklist per Prompt Efficaci
 
-Rendiamo questo operativo. Cinque ingredienti. Non servono sempre tutti e cinque — dipende dalla complessità del task. Ma ognuno che aggiungete migliora l'output.
+Rendiamo questo operativo. Quattro ingredienti. Non servono sempre tutti e quattro — dipende dalla complessità del task. Ma ognuno che aggiungete migliora l'output.
 
-**01 — Ruolo.** Dite al modello chi deve essere. "Sei un PM esperto in ambito fintech." "Sei un esperto di comunicazione stakeholder." Questo non è decorativo: attiva nel modello i pattern linguistici e di ragionamento più adeguati per quel contesto.
+Questa lista viene direttamente dalle linee guida di Anthropic e OpenAI — i team che costruiscono i modelli che usate ogni giorno.
 
-**02 — Compito.** Il verbo è fondamentale. "Scrivi", "analizza", "identifica", "sintetizza", "confronta" — ogni verbo orienta il modello verso un tipo di output diverso. Siate specifici: "scrivi una bozza" è diverso da "elenca i punti chiave".
+**01 — Compito.** Il verbo è fondamentale. "Scrivi", "analizza", "identifica", "sintetizza", "confronta" — ogni verbo orienta il modello verso un tipo di output diverso. Siate specifici: "scrivi una bozza" è diverso da "elenca i punti chiave".
 
-**03 — Contesto.** Tutto quello che il modello non può sapere da solo: il progetto, il settore, la fase, il team, il cliente, il vincolo. Più contesto rilevante date, più la risposta sarà pertinente. Non abbiate paura di essere prolissi in questa parte.
+**02 — Contesto.** Tutto quello che il modello non può sapere da solo: il progetto, il settore, la fase, il team, il cliente, il vincolo. Più contesto rilevante date, più la risposta sarà pertinente. Non abbiate paura di essere prolissi in questa parte.
 
-**04 — Formato.** Come volete l'output? Tabella, elenco puntato, testo continuo, massimo X parole, in italiano formale, in tono diretto? Senza questa indicazione, il modello sceglie da solo — e spesso sceglie in modo sbagliato per il vostro uso specifico.
+**03 — Formato.** Come volete l'output? Tabella, elenco puntato, testo continuo, massimo X parole, in italiano formale, in tono diretto? Senza questa indicazione, il modello sceglie da solo — e spesso sceglie in modo sbagliato per il vostro uso specifico.
 
-**05 — Vincoli.** Cosa non deve fare. "Evita tecnicismi." "Non usare linguaggio commerciale." "Non fare assunzioni su dati che non ti ho fornito." I vincoli sono spesso la parte più trascurata, e sono quelli che evitano le sorprese più fastidiose.
+**04 — Vincoli.** Cosa non deve fare. "Evita tecnicismi." "Non usare linguaggio commerciale." "Non fare assunzioni su dati che non ti ho fornito." I vincoli sono spesso la parte più trascurata, e sono quelli che evitano le sorprese più fastidiose.
 
 Usate questa checklist come base di lavoro. Con il tempo diventerà automatica.
+
+Una nota: il ruolo — "sei un esperto di risk management", "sei un responsabile comunicazione" — non è in questa lista di base. È una tecnica potente, e la vedremo nel prossimo capitolo come tecnica dedicata. Per ora, quattro ingredienti. Partite da qui.
 
 ---
 
@@ -212,26 +210,141 @@ C'è un concetto tecnico che devo spiegarvi, perché cambia il modo in cui usate
 
 Ogni volta che aprite una conversazione con un modello, c'è uno spazio di lavoro — come un foglio bianco molto grande. In quello spazio il modello legge tutto: le vostre istruzioni, i documenti che allegate, tutta la storia della conversazione fino a quel momento. Elabora tutto insieme, ogni volta che rispondete.
 
-Questo spazio non è infinito. Modelli diversi hanno finestre di contesto diverse — alcune molto grandi, alcune più limitate. Ma il principio è lo stesso: più informazioni rilevanti ci mettete dentro, migliore sarà la risposta. E quando la finestra si riempie troppo, il modello inizia a "dimenticare" le parti più vecchie della conversazione.
+Questo spazio non è infinito. Modelli diversi hanno finestre di contesto diverse. Ma il principio è lo stesso: più informazioni rilevanti ci mettete dentro, migliore sarà la risposta.
 
-Cosa mettere nel contesto? Il vostro ruolo e quello del destinatario. Il progetto: settore, obiettivo, fase, stakeholder. I documenti rilevanti: brief, verbali, metriche. Il tono e il pubblico dell'output atteso.
+Cosa mettere nel contesto? La vostra posizione e il destinatario dell'output. Il progetto: settore, obiettivo, fase, stakeholder chiave. I documenti rilevanti: brief, verbali, dati di sprint. Il tono e il pubblico dell'output atteso.
 
-Un punto che vale la pena citare. Anthropic, che sviluppa Claude, ha pubblicato nel 2025 un concetto interessante: il **context engineering**. La tesi è che il vero salto di qualità nell'uso dell'AI non stia più nel "trovare le parole giuste nel prompt" — ma nel costruire la configurazione di contesto più efficace per il task. Non è più una questione di formulazione: è una questione di architettura dell'informazione che date al modello.
+E guardate il confronto a destra. "Analizza i rischi del progetto." È un compito. Ma senza contesto, il modello non sa di quale progetto, in quale settore, con quale team, con quali vincoli. La risposta sarà generica.
 
-Per il PM, questo si traduce in una cosa concreta: costruite un template di contesto standard per i vostri progetti. Ruolo, progetto, vincoli, preferenze di output. Riutilatelo ogni volta. Vi fa risparmiare tempo e standardizza la qualità degli output.
+"Progetto ERP, team 5 persone, go-live Q3, budget 180k. Identifica i 3 rischi critici in formato tabella." — stessa richiesta di base, ma adesso il modello ha qualcosa su cui lavorare. La risposta sarà specifica, strutturata, utilizzabile.
+
+Il contesto non è decorativo. È il carburante del prompt.
 
 ---
 
-## 03.05 — Vincoli di Comunicazione
+## 03.05 — Il Contesto in Azione
 
-Prima di chiudere questo capitolo, dobbiamo affrontare i limiti. Non per spaventarvi — per rendervi utenti consapevoli.
+Chiudiamo il capitolo con due esempi reali. Non semplificati. Prompt che potreste scrivere domani mattina.
 
-**Nessuna memoria tra sessioni.** Ogni volta che aprite una nuova conversazione, il modello riparte da zero. Non ricorda il progetto che gli avete descritto ieri. Non ricorda le preferenze che gli avete comunicato la settimana scorsa. Ogni sessione è una tabula rasa. La soluzione pratica: costruite un "prompt di sistema" standard — un paragrafo che descrive il vostro contesto abituale — e incollatelo all'inizio di ogni nuova conversazione. Trenta secondi, e siete operativi.
+Guardateli e notate la struttura cromatica: il giallo è il contesto — le informazioni di progetto che solo voi potete dare. Il bianco è il compito — cosa deve fare il modello. Il grigio è il formato e i vincoli — come deve rispondere.
 
-**Conoscenza con data di scadenza.** Il modello è stato addestrato fino a una certa data. Non naviga internet in tempo reale — a meno che non abbiate attivato specificamente quella funzione. Non conosce l'accordo che avete firmato ieri, le metriche dello sprint della settimana scorsa, i cambiamenti organizzativi dell'ultimo mese. Queste informazioni dovete dargliele voi, allegandole o descrivendole nel prompt.
+**Primo esempio: analisi dei rischi.** Il contesto arriva prima del compito: migrazione CRM, quattro sviluppatori, go-live a cinque settimane, trenta utenti finali. Solo dopo arriva il compito: identifica i tre rischi critici. E poi il formato: tabella con quattro colonne — Rischio, Probabilità, Impatto, Azione — in italiano. Trenta parole di prompt, output professionale in dieci secondi.
 
-**Può generare dati plausibili ma falsi.** Questo è il punto su cui vi chiedo più attenzione. Il modello, quando non sa qualcosa con certezza, può inventarla — numeri, date, nomi, citazioni, link — con una sicurezza disarmante. Non lo fa per ingannare: è semplicemente il modo in cui funziona, genera il testo più probabile dato il contesto. La regola pratica è semplice: qualsiasi dato specifico che il modello vi fornisce — statistiche, nomi di persone, riferimenti normativi — va verificato prima di usarlo in un documento ufficiale o in una comunicazione professionale.
+**Secondo esempio: aggiornamento al comitato direttivo.** Stessa struttura. Il contesto descrive la situazione reale del progetto — sistema di ticketing, tre persone, quattro mesi, settanta percento completato, ritardo di due settimane per una causa esterna su un'API. Il compito è scrivere l'aggiornamento. I vincoli definiscono il tono e la lunghezza — professionale, rassicurante, centoventi parole, con una proposta di recupero entro fine mese.
 
-**Non conosce il vostro progetto.** L'AI non ha accesso a nessuna informazione riservata sulla vostra azienda, sul vostro cliente, sul vostro team. Quello che non gli dite non lo sa. Il PM è il bridge tra lo strumento e la realtà operativa. Questa è la vostra responsabilità — e anche il vostro vantaggio competitivo. Voi avete il contesto che il modello non ha. Dargli quel contesto è il lavoro del prompt engineering.
+Notate una cosa: in nessuno dei due prompt c'è "sei un esperto di". Non c'è il ruolo. Questi prompt funzionano già così. Il ruolo — quello che vedremo come Role Prompting nel prossimo capitolo — è una tecnica aggiuntiva che migliora ulteriormente l'output. Ma la base, già così, porta risultati.
+
+Questo è il capitolo tre. Adesso avete tutti gli strumenti fondamentali. Nel prossimo capitolo li potenziamo.
+
+---
+
+# Capitolo 04: Tecniche di Prompt Engineering
+
+---
+
+## Slide apertura capitolo
+
+Siamo arrivati al cuore del discorso. Abbiamo visto la struttura base di un prompt — competenza fondamentale, ma è solo l'inizio.
+
+Adesso facciamo il salto di qualità. Parliamo di tecniche avanzate: Zero-Shot, Role Prompting, Few-Shot, Chain of Thought. Nomi inglesi, concetti molto pratici.
+
+Queste non sono astrazioni teoriche. Sono i pattern sintattici che vi permettono di passare da risultati "accettabili" a output che potete inoltrare direttamente a un team o a uno stakeholder senza dover riscrivere tutto da capo.
+
+Iniziamo dalla base, per arrivare alla fine a combinare tutto in un unico prompt in grado di gestire task aziendali complessi.
+
+---
+
+## 04.01 — Zero-Shot Prompting
+
+Partiamo dalla tecnica base: lo Zero-Shot. "Zero tentativi".
+
+Cosa significa? Fare una richiesta diretta al modello *senza fornire alcun esempio* di come volete la risposta. Ci si affida esclusivamente a quello che il modello ha appreso dal suo addestramento generale.
+
+È la modalità di default. Quella che userete per il 90% delle interazioni rapide per snellire il lavoro quotidiano.
+
+Funziona benissimo quando il task è chiaro, quando fornite un buon contesto o quando volete mappare un terreno: brainstorming di idee, sintesi veloci di testi, esplorazioni. Non importa il millimetro, importa il concetto e l'output può essere flessibile.
+
+Ma attenzione ai limiti: quando vi serve che l'output rispetti un formato rigidissimo ("Voglio una tabella fatta in questo esatto modo"), o un tono aziendale difficilissimo da descrivere a parole... lo Zero-Shot fallisce. E se dovete delegare un'analisi complessa a molti step, l'AI si perde. Qui servono le prossime tecniche.
+
+---
+
+## 04.02 — Role Prompting
+
+Ed ecco la tecnica che dovreste usare quasi sempre: il Role Prompting.
+
+Il concetto è potentissimo: assegnare al modello un'identità o un ruolo professionale *prima* di chiedergli di fare qualcosa. "Sei un [RUOLO] con esperienza in [DOMINIO]."
+
+Perché funziona così bene? Perché gli LLM contengono la conoscenza "media" di internet. Se non date un ruolo, otterrete una risposta media. Se invece dite "Sei un senior project manager specializzato in migrazioni cloud", il modello istantaneamente restringe il proprio campo probabilistico. Adotterà il vocabolario di quel settore, i framework mentali di quel ruolo, l'autorevolezza di quel professionista.
+
+È il vostro filtro di qualità. Volete preparare un'analisi sui rischi? "Sei un esperto enterprise di risk management". Dovete scrivere un comunicato impopolare? "Sei un responsabile comunicazione corporate". Dovete smarcare una retrospective che temete sia improduttiva? "Sei un agile coach certificato".
+
+Aggiungere quelle poche parole all'inizio del prompt trasforma nettamente il livello di partenza della risposta. Usatelo sempre.
+
+---
+
+## 04.03 — Few-Shot Prompting
+
+A volte spiegare a parole cosa volete e come lo volete è un inferno. Molto più facile "farlo vedere". Questo è il Few-Shot Prompting. "Pochi tentativi".
+
+Invece di spiegare verbalmente le regole del formato al modello, gli date da 1 a 3 esempi concreti di *Input* e *Output* direttamente nel prompt. In questo modo riconoscerà la struttura e il tono, replicandoli per il task che gli assegnate.
+
+Vi faccio un caso pratico. Magari la vostra azienda usa un formato tabellare precisissimo per mappare i rischi. Piuttosto che scrivere parametri complessi, gli fornite due esempi di rischi già compilati perfettamente tratti dalla vostra documentazione:
+*Esempio 1: Causa -> Classe: Alta -> Azione.*
+*Esempio 2: Causa -> Classe: Media -> Azione.*
+Poi gli dite: "Adesso classifica questo nuovo rischio usando lo stesso identico schema".
+
+Il modello si nutre di pattern e regole implicite. Riconoscere questa struttura ed emularla chirurgicamente è la cosa che sa fare meglio.
+
+La regola d'oro da ricordarvi? Uno, a esagerare tre esempi. Metterne cinque o dieci non vi darà un risultato 10 volte migliore, appesantirà solo il sistema e brucerà budget context token. Ne bastano pochissimi.
+
+---
+
+## 04.04 — Chain of Thought Prompting
+
+Adesso andiamo sui prompt analitici: la "Catena di Pensiero" o Chain of Thought.
+
+Spesso, se chiedete a un LLM la risposta "finale" a un problema sfaccettato e con molte variabili contrastanti, sbaglierà. Cercherà di arrivare alla conclusione con un balzo logico solo, spesso incappando in un'allucinazione.
+
+Il trucco è questa istruzione "magica": **"Prima di rispondere, ragiona passo per passo"**.
+
+Aggiungere questa singola frase forza il modello a frenare l'output verboso iniziale, e lo costringe a esplicitare il proprio percorso logico sul "foglio" della chat: "Fase 1: analizzo il contesto. Fase 2: isolo l'IP. Fase 3: propongo il workaround".
+
+I vantaggi per un Project Manager sono due, enormi. 
+Numero uno: l'accuratezza della risposta migliora drasticamente perché ridurre il salto deduttivo rimpicciolisce lo spazio d'errore. 
+Numero due: il processo diventa "auditabile". Perché avete la prova scritta dei passaggi logici operati dall'intelligenza artificiale, e potete verificare come è arrivata a una certa conclusione tecnica.
+
+Usate il Chain of Thought quando chiedete all'AI diagnosi collegate a problemi complessi, decisioni con trade-off rischiosi e valutazioni progettuali determinanti.
+
+---
+
+## 04.05 — Combinare le Tecniche
+
+E per chiudere la parte formativa sui prompt: come mettiamo a terra queste lezioni? Combinandole in un singolo "Prompt Master".
+
+Nella slide vedete un caso reale e utilissimo. Creazione di un Risk Register.
+
+Notate l'anatomia del prompt:
+C'è il **Role**: *Sei un senior PM con 10 anni di esperienza SaaS.* (l'orientamento)
+C'è il **Contesto**: *Siamo a 3 settimane dal go-live, team di 4 dev.* (la realtà)
+C'è il **Few-Shot**: *[Un esempio reale di rischio compilato della vostra azienda]* (il formato)
+C'è il **Chain of Thought**: *Per ogni rischio, ragiona causa -> probabilità -> impatto -> azione.* (l'analisi strutturata)
+E poi c'è il **Task**: *Identifica i 5 rischi critici in formato tabella.*
+
+Pensate un minuto e mezzo a scrivere un prompt del genere. Ma il file di foglio di calcolo che ne esce non è "un generico elenco di minacce". È un'analisi concreta e formattata, pronta per essere revisionata in un decimo del tempo e inviata nel flusso di progetto aziendale.
+
+---
+
+## 04.06 — Guida Decisionale Rapida
+
+Riassumiamo e schematizziamo. Come capire qual è la tecnica giusta al volo?
+
+Task semplice o brainstorming rapido? **Zero-Shot**.
+Elevazione del linguaggio, task specifico: imponete un **Role**.
+Formattazioni obbligatorie, JSON, schemi aziendali ripetitivi: usate gli esempi con il **Few-Shot**.
+Decisioni critiche e percorsi non lineari: pretendete il **Chain of Thought**.
+
+Non siate pigri nei task chiave. Per i problemi cruciali del progetto, metteteci tre minuti e **combinatele tutte**.
+
+Le tecniche adesso ci sono. Ma queste tecniche sono "potenza", e "la potenza è nulla senza il controllo". Nel prossimo capitolo dobbiamo parlare di cosa l'AI generativa NON capisce, dei suoi allucinanti limiti tecnici e di come un PM debba relazionarsi ad essa.
 
 ---
