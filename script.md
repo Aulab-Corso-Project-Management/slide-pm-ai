@@ -348,3 +348,78 @@ Non siate pigri nei task chiave. Per i problemi cruciali del progetto, metteteci
 Le tecniche adesso ci sono. Ma queste tecniche sono "potenza", e "la potenza è nulla senza il controllo". Nel prossimo capitolo dobbiamo parlare di cosa l'AI generativa NON capisce, dei suoi allucinanti limiti tecnici e di come un PM debba relazionarsi ad essa.
 
 ---
+
+# Capitolo 05: Mindset e Limiti dell'AI nel PM
+
+---
+
+## Slide apertura capitolo
+
+Abbiamo visto cos'è, come funziona e le tecniche avanzate per estrarre il massimo valore dall'AI generativa. Siete tecnicamente pronti. 
+
+Ma c'è un'ultima cosa, quella che separa chi usa questo strumento in modo manageriale da chi si limita a "giocarci". Il Mindset.
+
+L'AI Generativa è potente, ma è una scatola nera piena di difetti di fabbricazione intrinseci. Oggi parleremo di cosa l'AI clamorosamente *non* capisce, di allucinazioni in grado di rovinarci la reputazione con gli stakeholder e delle regole tassative in tema di sicurezza aziendale.
+
+Perché lo strumento lo abbiamo, ma il Project Manager sul campo siete voi. 
+
+---
+
+## 05.01 — Il Modello NON Capisce
+
+Partiamo dal concetto più strano da sradicare. L'antropomorfizzazione.
+
+La fluidità sintattica dell'AI frega invariabilmente il nostro cervello. Noi siamo abituati che, chi ci risponde articolando le parole con coerenza e stile, ci "comprenda". Così trattiamo l'AI come se avesse una coscienza latente, un'intenzionalità. 
+
+Non ce l'ha. Dietro la chat non c'è intelligenza senziente, né un'anima digitale. C'è solo una matematica probabilistica enormemente avanzata che calcola sempre e solo quale sia il pezzettino di testo più verosimile da associare al precedente, ricopiando schemi visti in addestramento. 
+
+Cosa significa in concreto per voi? 
+Significa che l'AI non ha una rappresentazione mentale del mondo fisico in testa. Non capisce cosa sia un "cliente arrabbiato" che urla al telefono. Non capisce cos'è uno sforamento in banca letale per la vostra PMI. Ma sa esattamente quali *parole* usiamo noi umani quando descriviamo queste crisi e queste tempeste finanziarie.
+
+Questo per ribaddirvi che non c'è e non vi regalerà alcun "Controllo Oggettivo dei Fatti". Genererà frasi plausibilissime e linguisticamente incantevoli, ma l'accuratezza finale logica sulla realtà non è garantita matematicamente per natura.
+
+---
+
+## 05.02 — Le Allucinazioni
+
+E questo porta al vero tallone di Achille di un LLM: le allucinazioni.
+
+Provate l'ebbrezza di un'allucinazione la prima volta che il modello vi genera un'informazione del tutto errata o inesistente *ma* ve la presenta con la confidenza solenne di un relatore senior in un convegno. Non vi dirà "Boh, non lo so": vi scriverà una sciocchezza favolosa.
+
+Perché si inventano la roba? Per tre motivi che il PM deve individuare:
+Primo, **Mancanza di Dati**. Se ponete una richiesta vaga o non caricate dati puntuali, l'AI, istruita solo per compiacere e chiudere le frasi, andrà a "riempire i buchi" pescando per iperbole nel suo caos pur di risolvervi l'equazione statistica richiesta dal prompt. E si inventa le storie.
+Secondo, il **Bias della Rete**. Il modello è tarato su associazioni statisticamente frequenti (ad esempio bug X => configuratore Y rotto). Se questo non vale nella particolarità del vostro software, cercherà comunque di convincervi che la causa è quella.
+Terzo, i famigerati **Prompt Ambigui**. Senza rallentatori imposti come il "Ragiona passo per passo" (la Chain of Thought), l'AI corre troppo veloce per generare una conclusione saltando tranci essenziali della catena decisionale razionale.
+
+Quindi blindate i vostri contesti, la vostra check-list... e rileggete le bozze sempre in maniera spietata. L'unico fact-checker del progetto aziendale rimanete saldamente voi.
+
+---
+
+## 05.03 — Sicurezza e Privacy
+
+Cambiamo discorso, su binari sensibilissimi: vi do il vero motivo per cui l'azienda IT da cui fornite i cloud non vi ha fatto attivare l'AI gratis di prepotenza. La Privacy e i Dati.
+
+Regola ferrea, segnatevela per domattina: *i dati che caricate o inserite online in interfacce free-tier come ChatGPT spesso non vi appartengono*. Vengono in buona sostanza ingurgitati e rigurgitati in successivi step per pre-addestrare macchine più potenti.
+
+Per un Project Manager, esistono tre macro aree da depurare o filtrare radicalmente:
+**1. Proprietà Intellettuale**. Non fate recensire codice core, algoritmi chiave della startup o un design pre-lancio alla IA free. 
+**2. Dati Finanziari Sensibili**. Il modello di pricing e costi di una proposta commerciale segreta, lo stipendio del tech lead... niente pasti facili e proiezioni gratuite da farle incollare in Excel. Nessun prompt può avere questa roba.
+**3. PII (Personally Identifiable Information)**. Regole GDPR dure: un file dei feedback con le mail, i nomi reali e i log utente della piattaforma che si è rotta e che gli chiedete di aggiustare.
+
+Da oggi per voi entra in scena la **Pseudonimizzazione**. Se lavorate ad es. su Amazon con MySQL chiamateli banalmente "Cliente Z" con DB "Piattaforma W". Fatto.
+E best practice vera aziendale: pretendete subito dai superiori versioni *Enterprise* (che vi blindino contrattualmente lo *Zero-Data-Retention*) oppure, usando un bot generico e gratuito come Claude testualmente, andate dritti sui settaggi e spuntate "Off" dal check sull'opzione "Usa i miei dati x Chat History & Training Model" ancor prima di dire buongiorno all'IA.
+
+---
+
+## 05.04 — Il Nuovo Ruolo del PM
+
+Vi saluto e abbassiamo la serranda sfatando la profezia lavorativa peggiore: ma quindi l'intelligenza Artificiale spazzerà via il Project Manager umano dall'ufficio per sempre? Certo che no. 
+
+Un'AI super intelligente "non" affonderà le carriere di 3000 Project manager generalisti per rubargli il posto. Però c'è chi lo farà, un PM con lo stipendio triplo e zero burn-out prenderà il posto "del" Project Manager generalista classico, un banalissimo venerdì... Perché quel tizio lì la userà tutti i giorni mentre voi compilerete grafici.
+
+Il ruolo manageriale è scivolato dall'impostazione logorante e meccanica alla **Review Magistrale** su concetti più intellettuali e orchestrazioni altissime umane. Toglietevi dal creare fogli e focalizzatevi sulla soft-skill imponente che vi paga di più. Trovare l'armonia, mediare conflitti duri, guardare l'espressione in faccia ad un Product Owner che odia la roadmap ed evitare l'astio col team Tech. Scegliete voi, l'IA quelle robe per cinquant'anni almeno, umanamente non è in grado di raddrizzare. E il focus tornerà proprio su quello per cui servono i veri Project Manager, svelenando tutti i colli impiegatizi che fino ad oggi lo esaurivano per niente!
+
+L'intelligenza Artificiale vi appiana le logiche per sveltirle, la **Firma Finale per Responsabilità** però è orgogliosamente una condanna e un privilegio soltanto del genio umano a corredo. Aprite la plancia e sperimentate!
+Vi ringrazio e buon corso!
+
+---
