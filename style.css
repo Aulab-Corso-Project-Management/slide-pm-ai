@@ -173,5 +173,5 @@ html, body {
 }
 
 .reveal .controls {
-  display: none;
+  color: var(--aulab-yellow) !important;
 }
