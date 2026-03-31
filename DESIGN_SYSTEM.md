@@ -133,7 +133,7 @@ Struttura obbligatoria: `.slide-header` + wrapper centrato + grid.
 
     <!-- Eyebrow header — margin-bottom 50px via .slide-header in styles.css -->
     <div class="slide-header flex items-center gap-3 border-b border-white/5 pb-5">
-      <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow/60">
+      <span class="text-[0.65rem] font-bold uppercase tracking-[0.25em] text-aulab-yellow">
         01.01 &mdash; Label
       </span>
     </div>
@@ -249,7 +249,7 @@ Padding da `styles.css`:
     <div class="flex-1 glass-card flex flex-col items-center justify-center text-center">
       <div class="flex flex-col items-center gap-4">
         <span class="block text-4xl font-black text-gray-300 italic tracking-tighter leading-none">Titolo</span>
-        <p class="text-xs text-gray-500 leading-relaxed uppercase tracking-wider">Anno · Descrizione</p>
+        <p class="text-xs text-gray-400 leading-relaxed uppercase tracking-wider">Anno · Descrizione</p>
       </div>
     </div>
 
