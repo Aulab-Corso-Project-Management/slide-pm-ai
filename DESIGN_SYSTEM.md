@@ -15,9 +15,9 @@ Stack: **Reveal.js 5.1** · **Tailwind CSS v4 (browser CDN)** · **Font Awesome 
 | `dark-bg` | `#0B0E14` | Background globale |
 | `white/[0.05]` | rgba bianco 5% | Fill glass card |
 | `white/[0.12]` | rgba bianco 12% | Bordo glass card |
-| `gray-400` | `#9CA3AF` | Testo body muted |
-| `gray-500` | `#6B7280` | Testo molto muted, label secondari |
-| `gray-600` | `#4B5563` | Footer micro-label nelle card |
+| `gray-300` | `#D1D5DB` | Testo secondario leggibile, testo enfatizzato nelle card |
+| `gray-400` | `#9CA3AF` | Testo body muted — **colore minimo per leggibilità** |
+| `gray-600` | `#4B5563` | Separatori, frecce decorative (`fa-chevron-right`) |
 
 ### Gradient testo
 ```html
