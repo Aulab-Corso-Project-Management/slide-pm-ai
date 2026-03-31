@@ -2,6 +2,8 @@
 
 Stack: **Reveal.js 5.1** · **Tailwind CSS v4 (browser CDN)** · **Font Awesome 6.5** · **Montserrat**
 
+> **File CSS:** `style.css` (senza 's')
+
 ---
 
 ## Colori
@@ -164,6 +166,18 @@ Padding da `styles.css`:
 .reveal .glass-card { padding: 2.5rem 3rem !important; }
 ```
 
+#### Variante compatta — `glass-card-sm`
+
+Per layout a step/flow con molte card affiancate. Si usa **insieme** a `glass-card`:
+
+```html
+<div class="flex-1 glass-card glass-card-sm flex flex-col gap-3">...</div>
+```
+
+```css
+.reveal .glass-card-sm { padding: 1.5rem 1.75rem !important; }
+```
+
 #### Varianti bordo
 
 ```html
@@ -207,11 +221,49 @@ Padding da `styles.css`:
 ```html
 <ul class="space-y-4">
   <li class="flex items-center gap-3 text-sm text-gray-400">
+    <!-- dot yellow (capitoli dispari) -->
     <span class="w-1.5 h-1.5 rounded-full bg-aulab-yellow shrink-0"></span>
+    <!-- dot cyan (capitoli pari) -->
+    <!-- <span class="w-1.5 h-1.5 rounded-full bg-aulab-cyan shrink-0"></span> -->
     <span>Testo. <strong class="text-white font-semibold">Keyword</strong> continua.</span>
   </li>
 </ul>
 ```
+
+> **Nota:** Usare `mt-2` sul dot quando il testo va su più righe per allineamento visivo al top.
+
+### Prompt Block
+
+Blocco monospace per mostrare esempi di prompt. Padding da `style.css`.
+
+```html
+<div class="prompt-block">
+  <span class="text-aulab-cyan font-bold">[RUOLO]</span>
+  <span class="text-white/90">Sei un senior PM...</span>
+</div>
+
+<!-- versione più piccola -->
+<div class="prompt-block text-sm" style="flex:1;">...</div>
+```
+
+```css
+.prompt-block {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 16px !important;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem !important;
+  line-height: 1.6 !important;
+  color: #9CA3AF;
+}
+```
+
+Colorazione token prompt consigliata:
+- `text-aulab-cyan font-bold` → `[RUOLO]`, `[TASK]`
+- `text-aulab-yellow font-bold` → `[ESEMPIO]`
+- `text-gray-300 font-bold` → `[CONTESTO]`
+- `text-white/90` → testo del contenuto
 
 ---
 
@@ -265,18 +317,38 @@ Padding da `styles.css`:
 
 ### Agenda (slide indice)
 
+Le voci agenda sono **link** verso i capitoli. La sezione `<section>` di ogni capitolo deve avere `id="cap-XX"`. La slide agenda deve avere `id="agenda"` per la regola CSS `text-decoration: none`.
+
 ```html
-<div class="grid grid-cols-2 gap-x-16 gap-y-8">
-  <div class="flex items-center gap-6 group">
-    <div class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
-      <span class="text-xl font-black text-aulab-yellow">01</span>
-    </div>
-    <div class="flex flex-col gap-1">
+<section id="agenda">
+  ...
+  <div class="grid grid-cols-2 gap-x-16 gap-y-8 w-full">
+
+    <a href="#/cap-01" class="flex items-center gap-6 group no-underline">
+      <div class="w-14 h-14 rounded-2xl bg-aulab-yellow/5 flex items-center justify-center border border-aulab-yellow/10 group-hover:border-aulab-yellow/40 transition-all duration-500 shrink-0">
+        <span class="text-xl font-black text-aulab-yellow">01</span>
+      </div>
       <span class="text-xl font-bold text-white uppercase tracking-tight">Titolo Capitolo</span>
-    </div>
+    </a>
+
+    <!-- capitolo pari: cyan -->
+    <a href="#/cap-02" class="flex items-center gap-6 group no-underline">
+      <div class="w-14 h-14 rounded-2xl bg-aulab-cyan/5 flex items-center justify-center border border-aulab-cyan/10 group-hover:border-aulab-cyan/40 transition-all duration-500 shrink-0">
+        <span class="text-xl font-black text-aulab-cyan">02</span>
+      </div>
+      <span class="text-xl font-bold text-white uppercase tracking-tight">Titolo Capitolo</span>
+    </a>
+
   </div>
-  <!-- ripetere per ogni capitolo, alternando yellow/cyan -->
-</div>
+</section>
+```
+
+```css
+/* in style.css — rimuove underline su tutti i link nell'agenda */
+#agenda a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
 ```
 
 > **Nota:** I sottotitoli descrittivi in inglese (tipo "Introduction", "Architecture") sono stati rimossi. Ogni voce agenda ha solo il titolo italiano del capitolo.
@@ -286,10 +358,12 @@ Padding da `styles.css`:
 ## Struttura HTML Obbligatoria
 
 ```
-section[id="..."]
-  div.flex.flex-col.h-full
-    div.slide-header                   ← eyebrow, margin-bottom 50px via CSS
-    div.flex-1.flex.items-center       ← wrapper centramento verticale
-      div.grid.w-full                  ← layout (grid-cols-12 o grid-cols-2)
-        div.glass-card                 ← card con padding da styles.css
+section[id="cap-XX"]               ← wrapper capitolo, id per deep link dall'agenda
+  section.section-divider          ← prima slide del capitolo
+  section[id="slide-id"]           ← slide normali
+    div.flex.flex-col.h-full
+      div.slide-header             ← eyebrow, margin-bottom 50px via CSS
+      div.flex-1.flex.items-center ← wrapper centramento verticale
+        div.grid.w-full            ← layout (grid-cols-12 o grid-cols-2)
+          div.glass-card           ← card con padding da style.css
 ```
